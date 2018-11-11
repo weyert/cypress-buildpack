@@ -5,6 +5,3 @@
 # https://github.com/heroku/heroku-buildpack-nodejs/blob/master/bin/test-compile
 
 NODE_ENV=test "$(dirname ${0:-})/compile" "$1" "$2" "$3"
-
-# Attempt to install Cypress binary
-CYPRESS_CACHE_FOLDER=./node_modules/cypress/cache/Cypress ./node_modules/.bin/cypress install
