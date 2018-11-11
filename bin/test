@@ -9,7 +9,7 @@ export CI=true
 
 BUILD_DIR=${1:-}
 if yarn --version > /dev/null 2>&1; then
-  cd "$BUILD_DIR" && yarn run cypress
+  cd "$BUILD_DIR" && yarn run cypress-setup && yarn run cypress
 else
-  cd "$BUILD_DIR" && npm run cypress
+  cd "$BUILD_DIR" && npm run cypress-setup && npm run cypress
 fi
