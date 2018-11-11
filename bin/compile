@@ -31,7 +31,7 @@ branch=""
 dir=$(mktemp -t buildpackXXXXX)
 rm -rf $dir
 
-echo "-----> Configure Cypress build environment"
+echo "-----> Configure create-react-app build environment"
 # Set env vars for the inner buildpacks in `.buildpacks`
 # * during compile, install build tooling (devDependencies) with npm & Yarn
 # * in runtime, NODE_ENV is not used (this buildpack launches a static web server)
@@ -72,6 +72,6 @@ if [ $? == 0 ]; then
     exit 1
   fi
 else
-  echo "cypress `.buildpacks` not defined. Exiting."
+  echo "create-react-app `.buildpacks` not defined. Exiting."
   exit 1
 fi
